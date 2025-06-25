@@ -15,7 +15,7 @@ export default function Navbar() {
   const isActive = (path: string) =>
     pathname === path
       ? "text-red-800 font-semibold"
-      : "text-blue-950 hover:text-blue-800";
+      : "text-blue-950 hover:text-blue-900";
 
   return (
     <NavigationMenu>
