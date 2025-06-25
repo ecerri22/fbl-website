@@ -1,14 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
-import Link from "next/link";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from "@/components/ui/navigation-menu";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -16,42 +8,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <header className="sticky top-0 z-50 bg-white shadow-sm border-b">
           <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <h1 className="text-xl font-bold">FBL</h1>
-            <NavigationMenu>
-              <NavigationMenuList className="gap-6">
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/">Home</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/about">About</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/study-programs">Programs</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/departments">Departments</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/research">Research</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link href="/events">Events</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <h1 className="text-xl font-bold text-blue-950">FBL</h1>
+            <Navbar />
           </nav>
         </header>
 
