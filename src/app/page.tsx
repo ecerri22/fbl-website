@@ -14,12 +14,12 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col justify-center h-full space-y-6 text-white">
+            <p className="text-sm text-red-700 font-bold uppercase tracking-widest px-4">Welcome to the Faculty of Business and Law</p>
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight px-4">
-              Welcome to FBL
+              We Provide High Quality <span className="underline decoration-red-800">Education</span> For Everyone
             </h1>
-            <p className="text-lg px-4">
-              Learn about our programs, research projects, and the
-              academic life at the Faculty of Business and Law.
+            <p className="px-4 text-base text-zinc-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptas nihil deserunt sequi assumenda laudantium ipsam velit quos fuga consectetur.
             </p>
           </div>
         </div>
@@ -37,6 +37,40 @@ export default function Home() {
         </div>
 
       </section>
+
+      {/* ABOUT SECTION  */}
+      <section className=" flex flex-col md:flex-row gap-12 px-30 py-20 items-start">
+        {/* LEFT SIDE */}
+        <div className="space-y-6 p-3 basis-[40%]">
+          <p className="text-zinc-500 text-base leading-relaxed">
+            Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+          </p>
+          <p className="text-zinc-500 text-base leading-relaxed">
+            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+          </p>
+
+          <div>
+            <h6 className="text-zinc-800 font-bold text-lg tracking-wide">John Doe</h6>
+            <p className="text-sm text-zinc-500">Dean</p>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE – About Section */}
+        <div className="space-y-6 basis-[60%]">
+          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest">About FBL</h6>
+          <h2 className="text-3xl font-extrabold text-zinc-800 leading-tight">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti minima eum ex impedit repudiandae corporis.
+          </h2>
+          <p className="text-base text-zinc-500 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+          </p>
+          <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-6 py-3 tracking-wider">
+            Read More
+          </button>
+        </div>
+      </section>
+
+
     </main>
   );
 }
