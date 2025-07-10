@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, Globe, GraduationCap, Lightbulb, User, UserCheck, Users } from "lucide-react";
+import { ArrowRight, Briefcase, Globe, GraduationCap, Lightbulb, User, UserCheck, Users, CalendarDays, MapPin, Clock, Ticket } from "lucide-react";
 import Link from "next/link";
 
 
@@ -28,6 +28,32 @@ export default function Home() {
       description: "International programs and Erasmus+ opportunities across Europe.",
     },
   ];
+
+  const events = [
+    {
+      date: "15",
+      month: "June",
+      title: "Webinar",
+      location: "Hall",
+      time: "10:00 A.M. - End",
+      // price: "$20.00",
+    },
+    {
+      date: "24",
+      month: "July",
+      title: "Career Fair",
+      location: "Hall",
+      time: "10:00 A.M. - End",
+    },
+    {
+      date: "11",
+      month: "Aug",
+      title: "Webinar",
+      location: "Hall",
+      time: "10:00 A.M. - End",
+    },
+  ];
+
 
 
   return (
@@ -152,29 +178,75 @@ export default function Home() {
 
 
     {/* WHY CHOOSE FBL */}
-<section className="bg-white border-t border-zinc-200 py-20 px-6 md:px-20">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
-    <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-      Discover what makes our faculty stand out and how we prepare students for success.
+    <section className="bg-white border-t border-zinc-200 py-20 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
+        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+          Discover what makes our faculty stand out and how we prepare students for success.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+          {features.map((item, i) => (
+            <div
+              key={i}
+              className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-4">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* EVENTS  */}
+{/* EVENTS SECTION */}
+<section className="bg-blue-950 py-20 px-6 md:px-20 text-white">
+  <div className="max-w-5xl mx-auto text-center">
+    <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Our Events</h6>
+    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Check Our Latest Events</h2>
+    <p className="text-zinc-300 mb-12 max-w-2xl mx-auto">
+      Explore our upcoming academic and community events hosted by the Faculty of Business and Law.
     </p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-      {features.map((item, i) => (
+    <div className="space-y-8">
+      {events.map((event, i) => (
         <div
           key={i}
-          className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+          className="bg-white text-blue-950 flex items-center gap-6 p-6 rounded-md shadow hover:shadow-lg transition"
         >
-          <div className="mb-4">{item.icon}</div>
-          <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
-          <p className="text-sm text-gray-600">{item.description}</p>
+          {/* Date Box */}
+          <div className="bg-blue-900 text-white px-4 py-2 rounded-md text-center w-16 shrink-0">
+            <p className="text-xl font-bold">{event.date}</p>
+            <p className="text-sm uppercase tracking-wide">{event.month}</p>
+          </div>
+
+          {/* Event Info */}
+          <div className="flex-1 text-left space-y-1">
+            <h3 className="text-lg font-semibold">{event.title}</h3>
+            <div className="flex items-center text-sm text-gray-600 gap-4 flex-wrap">
+              <span className="flex items-center gap-1">
+                <MapPin className="w-4 h-4" /> {event.location}
+              </span>
+              <span className="flex items-center gap-1">
+                <Clock className="w-4 h-4" /> {event.time}
+              </span>
+              {/* <span className="flex items-center gap-1">
+                <Ticket className="w-4 h-4" /> {event.price}
+              </span> */}
+            </div>
+          </div>
+
+          {/* View Details */}
+          <div className="text-sm text-red-600 font-medium flex items-center gap-1 cursor-pointer hover:underline">
+            View Details <ArrowRight className="w-4 h-4" />
+          </div>
         </div>
       ))}
     </div>
   </div>
 </section>
-
-
 
     </main>
   );
