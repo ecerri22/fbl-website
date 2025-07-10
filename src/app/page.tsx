@@ -256,53 +256,69 @@ export default function Home() {
       </section>
 
       {/* NEWS SECTION */}
-      <section className="flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
+      <section className="bg-white py-24 px-6 md:px-20 text-blue-950">
         <div className="max-w-6xl mx-auto text-center">
-          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Latest News</h6>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Announcements & Activities</h2>
-          <p className="text-zinc-600 mb-12 max-w-2xl mx-auto">
-            Stay informed with the latest updates, academic announcements, and campus activities from FBL.
+          <h6 className="text-sm font-semibold text-red-700 uppercase tracking-widest mb-3">Latest News</h6>
+          <h2 className="text-4xl font-bold mb-4">Announcements & Activities</h2>
+          <p className="text-gray-600 mb-16 max-w-2xl mx-auto">
+            Stay up to date with important announcements, student activities, and academic developments from the Faculty of Business and Law.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* News Card 1 */}
-            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
-              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Announcement</p>
-              <h3 className="text-lg font-semibold mb-2">New Application Deadline for Master's Programs</h3>
-              <p className="text-sm text-zinc-600 mb-4">
-                The deadline to apply for the Fall 2025 intake has been extended to August 15.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Card 1 */}
+            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
+              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Announcement</div>
+              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
+                New Application Deadline for Master’s Programs
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">
+                The deadline to apply for Fall 2025 intake has been extended to August 15. Apply now to secure your place.
               </p>
-              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
                 Read More <ArrowRight className="w-4 h-4" />
               </div>
             </div>
 
-            {/* News Card 2 */}
-            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
-              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Activity</p>
-              <h3 className="text-lg font-semibold mb-2">Student Clubs Host Business Law Debate</h3>
-              <p className="text-sm text-zinc-600 mb-4">
-                Students from Business and Law programs came together for a public debate on digital legislation.
+            {/* Card 2 */}
+            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
+              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Activity</div>
+              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
+                Student Clubs Host Business Law Debate
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">
+                Students from Business and Law programs joined a public discussion on the challenges of digital legislation.
               </p>
-              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
                 Read More <ArrowRight className="w-4 h-4" />
               </div>
             </div>
 
-            {/* News Card 3 */}
-            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
-              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Notice</p>
-              <h3 className="text-lg font-semibold mb-2">Library Summer Hours</h3>
-              <p className="text-sm text-zinc-600 mb-4">
-                Please note that library access will be limited to 8:00–14:00 during the summer break.
+            {/* Card 3 */}
+            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
+              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Notice</div>
+              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
+                Library Summer Hours
+              </h3>
+              <p className="text-sm text-gray-600 mb-6">
+                During summer break, the library will be open from 08:00 to 14:00. Plan your study sessions accordingly.
               </p>
-              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
                 Read More <ArrowRight className="w-4 h-4" />
               </div>
             </div>
           </div>
+
+          {/* View All Button */}
+          <div className="mt-16">
+            <Link href="/news" passHref>
+              <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-sm uppercase px-8 py-3 tracking-wide rounded">
+                View All News
+              </button>
+            </Link>
+          </div>
         </div>
       </section>
+
 
     </main>
   );
