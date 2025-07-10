@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT SECTION  */}
-      <section className=" flex flex-col md:flex-row gap-12 px-30 py-20 items-start">
+      <section className=" flex flex-col md:flex-row gap-12 px-30 py-25 items-start">
         {/* LEFT SIDE */}
         <div className="space-y-6 p-3 basis-[40%]">
           <p className="text-zinc-500 text-base leading-relaxed">
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* STUDY PROGRAMS  */}
-      <section className="bg-blue-950 flex flex-col md:flex-row gap-12 px-30 py-20 items-center ">
+      <section className="bg-blue-950 flex flex-col md:flex-row gap-12 px-30 py-25 items-center ">
         {/* LEFT SIDE */}
         <div className="space-y-6 basis-[50%]">
           <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest">Study Programs</h6>
@@ -176,77 +176,133 @@ export default function Home() {
 
       </section>
 
+      {/* WHY CHOOSE FBL */}
+      <section className="flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
+        <div className=" mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
+          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+            Discover what makes our faculty stand out and how we prepare students for success.
+          </p>
 
-    {/* WHY CHOOSE FBL */}
-    <section className="bg-white border-t border-zinc-200 py-20 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-          Discover what makes our faculty stand out and how we prepare students for success.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-          {features.map((item, i) => (
-            <div
-              key={i}
-              className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* EVENTS  */}
-{/* EVENTS SECTION */}
-<section className="bg-blue-950 py-20 px-6 md:px-20 text-white">
-  <div className="max-w-5xl mx-auto text-center">
-    <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Our Events</h6>
-    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Check Our Latest Events</h2>
-    <p className="text-zinc-300 mb-12 max-w-2xl mx-auto">
-      Explore our upcoming academic and community events hosted by the Faculty of Business and Law.
-    </p>
-
-    <div className="space-y-8">
-      {events.map((event, i) => (
-        <div
-          key={i}
-          className="bg-white text-blue-950 flex items-center gap-6 p-6 rounded-md shadow hover:shadow-lg transition"
-        >
-          {/* Date Box */}
-          <div className="bg-blue-900 text-white px-4 py-2 rounded-md text-center w-16 shrink-0">
-            <p className="text-xl font-bold">{event.date}</p>
-            <p className="text-sm uppercase tracking-wide">{event.month}</p>
-          </div>
-
-          {/* Event Info */}
-          <div className="flex-1 text-left space-y-1">
-            <h3 className="text-lg font-semibold">{event.title}</h3>
-            <div className="flex items-center text-sm text-gray-600 gap-4 flex-wrap">
-              <span className="flex items-center gap-1">
-                <MapPin className="w-4 h-4" /> {event.location}
-              </span>
-              <span className="flex items-center gap-1">
-                <Clock className="w-4 h-4" /> {event.time}
-              </span>
-              {/* <span className="flex items-center gap-1">
-                <Ticket className="w-4 h-4" /> {event.price}
-              </span> */}
-            </div>
-          </div>
-
-          {/* View Details */}
-          <div className="text-sm text-red-600 font-medium flex items-center gap-1 cursor-pointer hover:underline">
-            View Details <ArrowRight className="w-4 h-4" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            {features.map((item, i) => (
+              <div
+                key={i}
+                className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className="mb-4">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
+      {/* EVENTS  */}
+      <section className="bg-blue-950 flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
+        <div className="max-w-5xl mx-auto text-center">
+          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Our Events</h6>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Check Our Latest Events</h2>
+          <p className="text-zinc-300 mb-12 max-w-2xl mx-auto">
+            Explore our upcoming academic and community events hosted by the Faculty of Business and Law.
+          </p>
+
+          <div className="space-y-8">
+            {events.map((event, i) => (
+              <div
+                key={i}
+                className="bg-white text-blue-950 flex items-center gap-6 p-6 rounded-md shadow hover:shadow-lg transition"
+              >
+                {/* Date Box */}
+                <div className="bg-blue-900 text-white px-4 py-2 rounded-md text-center w-16 shrink-0">
+                  <p className="text-xl font-bold">{event.date}</p>
+                  <p className="text-sm uppercase tracking-wide">{event.month}</p>
+                </div>
+
+                {/* Event Info */}
+                <div className="flex-1 text-left space-y-1">
+                  <h3 className="text-lg font-semibold">{event.title}</h3>
+                  <div className="flex items-center text-sm text-gray-600 gap-4 flex-wrap">
+                    <span className="flex items-center gap-1">
+                      <MapPin className="w-4 h-4" /> {event.location}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" /> {event.time}
+                    </span>
+                    {/* <span className="flex items-center gap-1">
+                      <Ticket className="w-4 h-4" /> {event.price}
+                    </span> */}
+                  </div>
+                </div>
+
+                {/* View Details */}
+                <div className="text-sm text-red-600 font-medium flex items-center gap-1 cursor-pointer hover:underline">
+                  View Details <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <Link href="/events" passHref>
+              <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-8 py-3 tracking-wider rounded">
+                View All Events
+              </button>
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* NEWS SECTION */}
+      <section className="flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
+        <div className="max-w-6xl mx-auto text-center">
+          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Latest News</h6>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Announcements & Activities</h2>
+          <p className="text-zinc-600 mb-12 max-w-2xl mx-auto">
+            Stay informed with the latest updates, academic announcements, and campus activities from FBL.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* News Card 1 */}
+            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
+              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Announcement</p>
+              <h3 className="text-lg font-semibold mb-2">New Application Deadline for Master's Programs</h3>
+              <p className="text-sm text-zinc-600 mb-4">
+                The deadline to apply for the Fall 2025 intake has been extended to August 15.
+              </p>
+              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+                Read More <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* News Card 2 */}
+            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
+              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Activity</p>
+              <h3 className="text-lg font-semibold mb-2">Student Clubs Host Business Law Debate</h3>
+              <p className="text-sm text-zinc-600 mb-4">
+                Students from Business and Law programs came together for a public debate on digital legislation.
+              </p>
+              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+                Read More <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* News Card 3 */}
+            <div className="bg-zinc-50 p-6 rounded-md shadow hover:shadow-lg transition hover:-translate-y-1">
+              <p className="text-sm text-red-600 font-semibold uppercase mb-2">Notice</p>
+              <h3 className="text-lg font-semibold mb-2">Library Summer Hours</h3>
+              <p className="text-sm text-zinc-600 mb-4">
+                Please note that library access will be limited to 8:00–14:00 during the summer break.
+              </p>
+              <div className="text-sm text-red-700 font-medium hover:underline cursor-pointer flex items-center gap-1">
+                Read More <ArrowRight className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
   );
