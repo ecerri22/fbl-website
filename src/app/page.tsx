@@ -177,10 +177,9 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE FBL */}
-      {/* WHY CHOOSE FBL – Enhanced */}
       <section className="bg-zinc-50 py-24 px-6 md:px-20">
         <div className="max-w-6xl mx-auto text-center">
-          <h6 className="text-sm font-semibold text-red-700 uppercase tracking-widest mb-2">Why Choose FBL</h6>
+          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-5">Why Choose FBL</h6>
           <h2 className="text-4xl font-bold text-blue-950 mb-4">Empowering Your Future</h2>
           <p className="text-zinc-600 mb-12 max-w-2xl mx-auto text-base">
             Discover how the Faculty of Business and Law equips students with the tools, knowledge, and mindset to succeed - in Albania and beyond.
@@ -202,11 +201,10 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* EVENTS  */}
       <section className="bg-blue-950 flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
         <div className="max-w-5xl mx-auto text-center">
-          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-2">Our Events</h6>
+          <h6 className="text-md font-semibold text-red-700 uppercase tracking-widest mb-5">Our Events</h6>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Check Our Latest Events</h2>
           <p className="text-zinc-300 mb-12 max-w-2xl mx-auto">
             Explore our upcoming academic and community events hosted by the Faculty of Business and Law.
@@ -262,66 +260,75 @@ export default function Home() {
       {/* NEWS SECTION */}
       <section className="bg-white py-24 px-6 md:px-20 text-blue-950">
         <div className="max-w-6xl mx-auto text-center">
-          <h6 className="text-sm font-semibold text-red-700 uppercase tracking-widest mb-3">Latest News</h6>
+          <h6 className="text-sm font-semibold text-red-700 uppercase tracking-widest mb-5">Latest News</h6>
           <h2 className="text-4xl font-bold mb-4">Announcements & Activities</h2>
-          <p className="text-gray-600 mb-16 max-w-2xl mx-auto">
-            Stay up to date with important announcements, student activities, and academic developments from the Faculty of Business and Law.
+          <p className="text-gray-600 mb-16 max-w-2xl mx-auto text-base">
+            What’s happening around FBL: important notices, exciting student activities, and academic updates worth reading.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Card 1 */}
-            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
-              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Announcement</div>
-              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
-                New Application Deadline for Master’s Programs
-              </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                The deadline to apply for Fall 2025 intake has been extended to August 15. Apply now to secure your place.
-              </p>
-              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
-                Read More <ArrowRight className="w-4 h-4" />
+        {/* News Grid */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Featured Card */}
+          <div className="h-50 col-span-1 md:col-span-2 bg-zinc-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+            <div className="md:flex">
+              <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+                <img
+                  src="/images/fakulteti-ekonomik-uniel.jpg"
+                  alt="Featured News"
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
-              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Activity</div>
-              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
-                Student Clubs Host Business Law Debate
-              </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                Students from Business and Law programs joined a public discussion on the challenges of digital legislation.
-              </p>
-              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
-                Read More <ArrowRight className="w-4 h-4" />
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-zinc-50 hover:bg-white border border-zinc-200 rounded-xl p-6 transition hover:shadow-xl group">
-              <div className="mb-2 text-sm font-semibold text-red-600 uppercase tracking-wide">Notice</div>
-              <h3 className="text-lg font-semibold group-hover:text-blue-900 transition mb-3">
-                Library Summer Hours
-              </h3>
-              <p className="text-sm text-gray-600 mb-6">
-                During summer break, the library will be open from 08:00 to 14:00. Plan your study sessions accordingly.
-              </p>
-              <div className="text-sm text-red-700 font-medium hover:underline flex items-center gap-1 cursor-pointer">
-                Read More <ArrowRight className="w-4 h-4" />
+              <div className="p-6 text-left space-y-3 flex-1">
+                <span className="text-xs text-red-600 font-semibold uppercase">Announcement • Aug 10, 2025</span>
+                <h3 className="text-xl font-semibold text-blue-950 group-hover:text-red-700 transition">
+                  Application Deadline for Master’s Programs Extended
+                </h3>
+                <p className="text-sm text-gray-600">
+                  The new deadline for Fall 2025 applications is August 15. This gives students additional time to submit all required documents...
+                </p>
+                <div className="text-sm text-red-700 font-medium flex items-center gap-1 hover:underline mt-2 cursor-pointer">
+                  Read More <ArrowRight className="w-4 h-4" />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* View All Button */}
-          <div className="mt-16">
-            <Link href="/news" passHref>
-              <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-sm uppercase px-8 py-3 tracking-wide rounded">
-                View All News
-              </button>
-            </Link>
+          {/* Card 2 */}
+          <div className="bg-zinc-50 rounded-xl shadow hover:shadow-lg transition p-6 space-y-3">
+            <span className="text-xs text-red-600 font-semibold uppercase">Activity • July 18, 2025</span>
+            <h4 className="text-lg font-semibold text-blue-900">Student Clubs Host Business Law Debate</h4>
+            <p className="text-sm text-gray-600">
+              A vibrant panel discussion brought students together to discuss the digital future of legislation.
+            </p>
+            <div className="text-sm text-red-700 font-medium flex items-center gap-1 hover:underline mt-2 cursor-pointer">
+              Read More <ArrowRight className="w-4 h-4" />
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-zinc-50 rounded-xl shadow hover:shadow-lg transition p-6 space-y-3">
+            <span className="text-xs text-red-600 font-semibold uppercase">Notice • July 01, 2025</span>
+            <h4 className="text-lg font-semibold text-blue-900">Library Summer Hours Announced</h4>
+            <p className="text-sm text-gray-600">
+              The library will operate 08:00–14:00 during the summer break. Please plan your study hours accordingly.
+            </p>
+            <div className="text-sm text-red-700 font-medium flex items-center gap-1 hover:underline mt-2 cursor-pointer">
+              Read More <ArrowRight className="w-4 h-4" />
+            </div>
           </div>
         </div>
+
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <Link href="/news" passHref>
+            <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-sm uppercase px-8 py-3 tracking-wide rounded">
+              View All News
+            </button>
+          </Link>
+        </div>
       </section>
+
 
 
     </main>
