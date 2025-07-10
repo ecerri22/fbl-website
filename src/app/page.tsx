@@ -177,27 +177,31 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE FBL */}
-      <section className="flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
-        <div className=" mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
-          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
-            Discover what makes our faculty stand out and how we prepare students for success.
+      {/* WHY CHOOSE FBL – Enhanced */}
+      <section className="bg-zinc-50 py-24 px-6 md:px-20">
+        <div className="max-w-6xl mx-auto text-center">
+          <h6 className="text-sm font-semibold text-red-700 uppercase tracking-widest mb-2">Why Choose FBL</h6>
+          <h2 className="text-4xl font-bold text-blue-950 mb-4">Empowering Your Future</h2>
+          <p className="text-zinc-600 mb-12 max-w-2xl mx-auto text-base">
+            Discover how the Faculty of Business and Law equips students with the tools, knowledge, and mindset to succeed - in Albania and beyond.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
             {features.map((item, i) => (
               <div
                 key={i}
-                className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 text-center"
               >
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
+                <div className="mb-4 flex justify-center">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>
+
         </div>
       </section>
+
 
       {/* EVENTS  */}
       <section className="bg-blue-950 flex flex-col md:flex-row gap-12 px-30 py-25 items-center">
