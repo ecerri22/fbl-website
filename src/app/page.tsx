@@ -1,10 +1,35 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, UserCheck } from "lucide-react";
+import { ArrowRight, Briefcase, Globe, GraduationCap, Lightbulb, User, UserCheck, Users } from "lucide-react";
 import Link from "next/link";
 
 
 export default function Home() {
+
+  const features = [
+    {
+      icon: <Lightbulb className="w-8 h-8 text-red-700" />,
+      title: "Innovative Programs",
+      description: "Our curriculum is built to respond to modern challenges in business and law.",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-red-700" />,
+      title: "Expert Faculty",
+      description: "Learn from professors with real-world experience and academic excellence.",
+    },
+    {
+      icon: <Briefcase className="w-8 h-8 text-red-700" />,
+      title: "Career Focused",
+      description: "Internships, career services, and employer partnerships to prepare you for work.",
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-red-700" />,
+      title: "Global Perspective",
+      description: "International programs and Erasmus+ opportunities across Europe.",
+    },
+  ];
+
+
   return (
     <main className="min-h-screen bg-white">
       {/* HERO SECTION */}
@@ -124,6 +149,32 @@ export default function Home() {
 
 
       </section>
+
+
+    {/* WHY CHOOSE FBL */}
+<section className="bg-white border-t border-zinc-200 py-20 px-6 md:px-20">
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-semibold text-blue-950 mb-4">Why Choose FBL</h2>
+    <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+      Discover what makes our faculty stand out and how we prepare students for success.
+    </p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+      {features.map((item, i) => (
+        <div
+          key={i}
+          className="text-left bg-white p-4 rounded-md transition transform hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div className="mb-4">{item.icon}</div>
+          <h3 className="text-lg font-semibold text-blue-950 mb-2">{item.title}</h3>
+          <p className="text-sm text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
     </main>
   );
