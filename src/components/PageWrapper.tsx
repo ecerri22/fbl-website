@@ -12,10 +12,15 @@ export default function PageWrapper({ children }: PageWrapperProps) {
   const isHome = pathname === "/";
 
   const dynamicTitle = pathname
-    .split("/")
-    .filter(Boolean)
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join(" ");
+  .split("/")
+  .filter(Boolean)
+  .map((segment) =>
+    segment
+      .replace(/-/g, " ") 
+      .replace(/\b\w/g, (char) => char.toUpperCase()) 
+  )
+  .join(" / ");
+
 
   return (
     <>

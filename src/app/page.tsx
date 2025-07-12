@@ -118,9 +118,12 @@ export default function Home() {
           <p className="text-base text-zinc-500 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
           </p>
-          <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-6 py-3 tracking-wider">
-            Read More
-          </button>
+          <Link href="/about-us" passHref>
+            <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-6 py-3 tracking-wider">
+              Read More
+            </button>
+          </Link>
+
         </div>
       </section>
 
@@ -239,7 +242,7 @@ export default function Home() {
                 </div>
 
                 {/* View Details */}
-                <div className="text-sm text-red-600 font-medium flex items-center gap-1 cursor-pointer hover:underline">
+                <div className="text-sm text-red-700 font-medium flex items-center gap-1 cursor-pointer hover:underline">
                   View Details <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -280,7 +283,7 @@ export default function Home() {
                 />
               </div>
               <div className="p-6 text-left space-y-3 flex-1">
-                <span className="text-xs text-red-600 font-semibold uppercase">Announcement • Aug 10, 2025</span>
+                <span className="text-xs text-red-700 font-semibold uppercase">Announcement • Aug 10, 2025</span>
                 <h3 className="text-xl font-semibold text-blue-950 group-hover:text-red-700 transition">
                   Application Deadline for Master’s Programs Extended
                 </h3>
@@ -296,7 +299,7 @@ export default function Home() {
 
           {/* Card 2 */}
           <div className="bg-zinc-50 rounded-xl shadow hover:shadow-lg transition p-6 space-y-3">
-            <span className="text-xs text-red-600 font-semibold uppercase">Activity • July 18, 2025</span>
+            <span className="text-xs text-red-700 font-semibold uppercase">Activity • July 18, 2025</span>
             <h4 className="text-lg font-semibold text-blue-900">Student Clubs Host Business Law Debate</h4>
             <p className="text-sm text-gray-600">
               A vibrant panel discussion brought students together to discuss the digital future of legislation.
@@ -308,7 +311,7 @@ export default function Home() {
 
           {/* Card 3 */}
           <div className="bg-zinc-50 rounded-xl shadow hover:shadow-lg transition p-6 space-y-3">
-            <span className="text-xs text-red-600 font-semibold uppercase">Notice • July 01, 2025</span>
+            <span className="text-xs text-red-700 font-semibold uppercase">Notice • July 01, 2025</span>
             <h4 className="text-lg font-semibold text-blue-900">Library Summer Hours Announced</h4>
             <p className="text-sm text-gray-600">
               The library will operate 08:00–14:00 during the summer break. Please plan your study hours accordingly.
