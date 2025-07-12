@@ -32,7 +32,7 @@ export default function Navbar() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={isActive("/study-programs")}>
-            <Link href="/study-programs">Programs</Link>
+            <Link href="/study-programs">Study Programs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

@@ -138,22 +138,23 @@ export default function Home() {
           <p className="text-base text-zinc-400 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
           </p>
-          <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-6 py-3 tracking-wider">
-            Read More
-          </button>
+          <Link href="/study-programs">
+            <button className="bg-red-700 hover:bg-red-800 transition text-white font-semibold text-xs uppercase px-6 py-3 tracking-wider">
+              View All Programs
+            </button>
+          </Link>
         </div>
        
 
         {/* RIGHT SIDE */}
          <div className="flex flex-col gap-6 space-y-6 basis-[50%]">
           {/* Bachelor's Card */}
-          <Link href="/bachelors" passHref>
+          <Link href="/study-programs?type=bachelor" passHref>
             <div className="bg-white text-blue-950 p-6 rounded-md shadow group relative overflow-hidden transition hover:shadow-lg cursor-pointer">
               <h3 className="text-xl font-semibold mb-1">Bachelor’s Degree Programs</h3>
               <p className="text-sm text-zinc-600">
                 Explore a variety of undergraduate programs tailored to your future.
               </p>
-
               <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
                 <ArrowRight className="w-6 h-6 text-red-700" />
               </div>
@@ -161,7 +162,7 @@ export default function Home() {
           </Link>
 
           {/* Master's Card */}
-          <Link href="/masters" passHref>
+          <Link href="/study-programs?type=master" passHref>
             <div className="bg-white text-blue-950 p-6 rounded-md shadow group relative overflow-hidden transition hover:shadow-lg cursor-pointer">
               <h3 className="text-xl font-semibold mb-1">Master’s Degree Programs</h3>
               <p className="text-sm text-zinc-600">

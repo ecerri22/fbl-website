@@ -80,7 +80,7 @@ export default function AboutPage() {
               Discover the right program for your future in Business and Law.
             </p>
             <a
-              href="/programs"
+              href="/study-programs"
               className="bg-red-700 hover:bg-red-800 text-white font-semibold text-sm uppercase px-8 py-3 tracking-wider "
             >
               Explore Study Programs
