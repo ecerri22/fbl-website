@@ -1,9 +1,14 @@
-import { Button } from "@/components/ui/button";
+import PageWrapper from "@/components/PageWrapper";
 
 export default function AboutPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Button>Click Me</Button>
-    </main>
+    <PageWrapper>
+      <section className="p-6">
+        <h2 className="text-2xl font-bold">About Our Faculty</h2>
+        <p className="mt-4 text-gray-700">
+          The Faculty of Business and Law combines academic excellence...
+        </p>
+      </section>
+    </PageWrapper>
   );
 }
