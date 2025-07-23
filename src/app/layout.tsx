@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="flex flex-col min-h-screen">
         <header className="sticky top-0 z-50 bg-white shadow-sm border-b">
           <nav className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
             <h1 className="text-xl font-bold text-blue-950">FBL</h1>
@@ -14,9 +14,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </nav>
         </header>
 
-        <main>{children}</main>
+        <main  className="flex-grow min-h-[500px]">{children}</main>
 
-        <Footer/>
+        <Footer className="mt-auto"/>
       </body>
     </html>
   );

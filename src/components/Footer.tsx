@@ -2,9 +2,9 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ className = "" }: { className?: string }) {
   return (
-    <footer className="bg-blue-950 text-white px-6 md:px-20 pt-16 pb-10">
+    <footer className={`bg-blue-950 text-white px-6 md:px-20 pt-16 pb-10 ${className}`}>
       <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 md:grid-cols-4">
         {/* Brand / About */}
         <div className="space-y-4">
