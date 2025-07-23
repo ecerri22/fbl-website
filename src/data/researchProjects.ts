@@ -1,4 +1,3 @@
-// data/researchProjects.ts
 export const researchProjects = [
   {
     slug: "transformimi-digjital-i-ndermarrjeve",

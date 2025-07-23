@@ -9,7 +9,7 @@ export default function ResearchPage() {
     <main className="bg-white min-h-screen px-6 py-16 md:px-20 space-y-24">
       {/* HERO */}
       <section className="text-center max-w-4xl mx-auto space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold text-blue-950">
+        <h1 className="text-4xl md:text-4xl font-bold text-blue-950">
           Kërkimi Shkencor në Fakultetin e Biznesit dhe të Drejtësisë
         </h1>
         <p className="text-zinc-600 text-lg">

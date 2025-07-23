@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Briefcase, Globe, GraduationCap, Lightbulb, User, UserCheck, Users, CalendarDays, MapPin, Clock, Ticket } from "lucide-react";
 import Link from "next/link";
-
+import { events } from "@/data/eventsData";
 
 export default function Home() {
 
@@ -244,7 +244,14 @@ export default function Home() {
 
                 {/* View Details */}
                 <div className="text-sm text-red-700 font-medium flex items-center gap-1 cursor-pointer hover:underline">
-                  View Details <ArrowRight className="w-4 h-4" />
+                  {/* View Details <ArrowRight className="w-4 h-4" /> */}
+                  <Link
+                    href={`/events/${event.slug}`}
+                    className="text-red-700 font-medium text-sm hover:underline inline-flex items-center gap-1"
+                  >
+                    View Details →
+                  </Link>
+
                 </div>
               </div>
             ))}
