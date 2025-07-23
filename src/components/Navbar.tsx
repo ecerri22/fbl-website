@@ -27,7 +27,7 @@ export default function Navbar() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={isActive("/about-us")}>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-us">About Us</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
