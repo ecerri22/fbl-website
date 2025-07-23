@@ -4,6 +4,7 @@ export const allPrograms = [
   level: "Bachelor",
   slug: "administrim-biznes-bachelor",
   department: "Administrim-Biznes & Inxhinieri",
+  departmentSlug: "administrim-biznes",
   description: "Ky program ofron një bazë të fortë në menaxhim dhe ekonomi.",
   why: "Programi kombinon teori me praktikë për t’i përgatitur studentët për tregun e punës.",
   career: "Diplomuarit mund të punojnë si menaxherë, analistë financiarë, ose të nisin biznesin e tyre.",
