@@ -12,12 +12,12 @@ const departments = [
     description: "Ofron njohuri të thella në menaxhim, financë dhe sipërmarrje.",
     image: "/images/adm-biznes.jpg",
   },
-  {
-    name: "Departamenti i Marketing Inxhinierisë",
-    slug: "marketing-inxhinieri",
-    description: "Ndërthur marketingun modern me mendësinë inxhinierike.",
-    image: "/images/marketing-inxhinieri.jpg",
-  },
+  // {
+  //   name: "Departamenti i Marketing Inxhinierisë",
+  //   slug: "marketing-inxhinieri",
+  //   description: "Ndërthur marketingun modern me mendësinë inxhinierike.",
+  //   image: "/images/marketing-inxhinieri.jpg",
+  // },
 ];
 
 export default function DepartmentPage({ params }: { params: Promise<{ slug: string }> }) {
