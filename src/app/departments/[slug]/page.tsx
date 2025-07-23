@@ -16,8 +16,8 @@ const departments = [
     quote:
       "Ne nuk edukojmë vetëm profesionistë, por formojmë liderë me ndikim në botën reale.",
     staff: [
-      { name: "Dr. John Doe", title: "Shef Departamenti" },
-      { name: "Msc. John Doe", title: "Pedagoge" },
+      { name: "Dr. John Doe", title: "Shef Departamenti", slug: "john-doe" },
+      { name: "Msc. John Doe", title: "Pedagoge", slug: "john-doe" },
     ],
     highlights: [
       "Qasje praktike me projekte reale",
@@ -120,26 +120,29 @@ export default function DepartmentPage({ params }: { params: { slug: string } })
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {department.staff.map((member, idx) => (
-            <li
-              key={idx}
-              className="p-4 border rounded-xl bg-white shadow-sm hover:shadow-md transition"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm">
-                  {member.name
-                    .split(" ")
-                    .map((part) => part[0])
-                    .join("")}
+            <li key={idx}>
+              <Link
+                href={`/staff/${member.slug}`}
+                className="block p-4 border rounded-xl bg-white shadow-sm hover:shadow-md hover:border-blue-300 transition"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-sm">
+                    {member.name
+                      .split(" ")
+                      .map((part) => part[0])
+                      .join("")}
+                  </div>
+                  <div>
+                    <p className="text-blue-950 font-medium">{member.name}</p>
+                    <p className="text-gray-600 text-sm">{member.title}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-blue-950 font-medium">{member.name}</p>
-                  <p className="text-gray-600 text-sm">{member.title}</p>
-                </div>
-              </div>
+              </Link>
             </li>
           ))}
         </ul>
       </section>
+
     </div>
   );
 }
