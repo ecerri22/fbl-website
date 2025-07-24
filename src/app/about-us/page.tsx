@@ -5,7 +5,7 @@ import { CheckCircle, Target, Eye } from "lucide-react";
 export default function AboutPage() {
   return (
     <PageWrapper>
-      <section className="bg-white text-blue-950 px-6 md:px-20 py-20">
+      <main className="bg-white text-blue-950 px-6 md:px-20 py-20 min-h-screen px-6 py-16 space-y-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
           {/* Left: Image */}
@@ -85,7 +85,7 @@ export default function AboutPage() {
             </a>
           </div>
 
-      </section>
+      </main>
     </PageWrapper>
   );
 }

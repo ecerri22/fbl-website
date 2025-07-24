@@ -62,7 +62,7 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-2 items-center">
         
         {/* Text content */}
-        <div className="relative h-96 md:h-[500px] p-30 bg-cover bg-center bg-[url('/images/fakulteti-ekonomik-uniel.jpg')]">
+        <div className="relative h-96 md:h-[500px] p-30 bg-cover bg-center bg-[url('/images/the-jopwell-collection-0UnuYI_HrTA-unsplash.jpg')]">
           {/* Blue overlay */}
           <div className="absolute inset-0 bg-blue-950 opacity-90 z-0" />
 
@@ -82,7 +82,8 @@ export default function Home() {
         {/* Right Image */}
         <div className="relative w-full h-96 md:h-[500px]">
           <Image
-            src="/images/fakulteti-ekonomik-uniel.jpg"
+            // src="/images/fakulteti-ekonomik-uniel.jpg"
+            src="/images/the-jopwell-collection-0UnuYI_HrTA-unsplash.jpg"
             alt="hero-banener"
             fill
             className="object-cover w-full h-full"
