@@ -27,7 +27,7 @@ export default function DepartmentPage({ params }: { params: Promise<{ slug: str
   return (
     <PageWrapper>
       <main className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-blue-950 mb-8">Departamentet</h1>
+        {/* <h1 className="text-3xl font-bold text-blue-950 mb-8">Departamentet</h1> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {departments.map((dept) => (
