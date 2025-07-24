@@ -11,7 +11,7 @@ export default function AboutPage() {
           {/* Left: Image */}
           <div className="relative w-full h-[450px] rounded-lg overflow-hidden shadow-md">
             <Image
-              src="/images/about-students.jpg" // Replace with your actual image path
+              src="/images/about-students.jpg" 
               alt="Happy Students"
               fill
               className="object-cover"
@@ -21,9 +21,7 @@ export default function AboutPage() {
 
           {/* Right: Content */}
           <div>
-            <h6 className="text-red-700 uppercase text-sm font-semibold tracking-widest mb-3">
-              About FBL
-            </h6>
+            
             <h2 className="text-4xl font-bold leading-snug mb-4">
               We Ensure Better Education <br />
               For A Better World
